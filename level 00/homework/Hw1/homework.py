@@ -6,26 +6,24 @@
 # ციკლის და რეკურსიის (აგრეთვე range) კონსტრუქციის გამოყენების გარეშე.
 
 
-def nums(a,b,c):
-    max_AB = max(a, b)
-    min_AB = min(a, b)
-
-    if c == 0:
+def count_multiples(a, b, c, current):
+    if current > b:
         return 0
+    if current % c == 0:
+        return 1 + count_multiples(a, b, c, current + c)
+    return count_multiples(a, b, c, current + c)
+
+def find_multiples(a, b, c):
+    if a % c == 0:
+        first_multiple = a
+    else:
+        first_multiple = a + (c - a % c)
     
-    count = 0
-    if min_AB % c == 0:
-        count += 1
-    if max_AB % c == 0:
-        count += 1
+    return count_multiples(a, b, c, first_multiple)
 
-    for num in range(min_AB + 1, max_AB):
-        if num % c == 0:
-            count += 1
-            
-    return count
+a = int(input("შეიყვანეთ a: "))
+b = int(input("შეიყვანეთ b: "))
+c = int(input("შეიყვანეთ c: "))
 
-print("ჯერადი რიცხვების რაოდენობა: ", nums(int(input("შეიყვანეთ a: ")), 
-                                            int(input("შეიყვანეთ b: ")), 
-                                            int(input("შეიყვანეთ c: "))
-                                            ))
+result = find_multiples(a, b, c)
+print(f"c-ით ჯერადი რიცხვების რაოდენობა a და b შორის: {result}")

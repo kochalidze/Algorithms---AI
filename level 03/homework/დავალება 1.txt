@@ -1,0 +1,18 @@
+1) თავიდან გადახედეთ maximum_find pdf'ში maximum_find ალგორითმის ანალიზს 4 ელემენტის შემთხვევაში.
+ შემდეგ კი გააკეთეთ ზუსტად იგივე 5 ელემენტის შემთხვევაში (დაწერეთ ალგორითმის ფსევდოკოდი, დახაზეთ წრიული დიაგრამა,
+ შეადგინეთ სისტემა და დათვალეთ მინიჭების სირთულის ფუნქციის საშუალო (ET))
+
+
+
+ფსევდოკოდი:
+
+
+ALGORITHM Maximum_Find(A, n)
+    INPUT: Array A of n elements
+    OUTPUT: The maximum element in A
+
+    max = A[0]
+    for i = 1 to n-1 do
+        if A[i] > max then
+            max = A[i]
+    return max

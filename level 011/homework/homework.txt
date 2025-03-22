@@ -1,0 +1,8 @@
+
+
+
+დააინსტალირეთ virtual box და debian (iso ან dvd) დააყენეთ debian linux-ის ოპერაციული სისტემა თქვენს მოწყობილობაში
+
+
+
+დავაინსტალირე virtual box და debian-იც დავაყენე!
